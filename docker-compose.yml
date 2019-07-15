@@ -1,0 +1,12 @@
+version: '3'
+services:
+  main:
+    build: .
+    volumes:
+      - .:/app
+    networks:
+      - backend
+    tty: true
+networks:
+  backend:
+    driver: bridge
